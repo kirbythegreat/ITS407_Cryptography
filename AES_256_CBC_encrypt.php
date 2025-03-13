@@ -3,7 +3,8 @@
 define('CIPHER_METHOD', 'AES-256-CBC');
 
 function getDerivedKey() {
-    $secret = getenv('ENCRYPTION_SECRET'); 
+    $config = require('config.php');
+    $secret = $config['secret'];
     return hash_pbkdf2('sha256', $secret, 'some_salt_value', 100000, 32, true); 
 }
 

@@ -14,7 +14,6 @@
             <textarea name="text" required></textarea>
             <div class="buttons">
                 <button class="btn btn-warning" type="submit" name="encrypt">Encrypt</button>
-                
             </div>
         </form>
 
